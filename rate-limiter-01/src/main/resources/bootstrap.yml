@@ -1,0 +1,6 @@
+spring:
+  application:
+    name: rate-limiter
+  profiles:
+    active: test
+    include: common

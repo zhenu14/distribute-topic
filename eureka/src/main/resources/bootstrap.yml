@@ -1,0 +1,11 @@
+spring:
+  application:
+    name: eureka-server
+  profiles:
+    active: test
+  security:
+    user:
+      password: 12345678
+      name: unionman
+server:
+  port: 7001

@@ -1,0 +1,5 @@
+spring:
+  cloud:
+    config:
+      uri: http://user:12345678@localhost:8888
+      fail-fast: true

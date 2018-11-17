@@ -1,0 +1,12 @@
+eureka:
+  instance:
+    prefer-ip-address: true
+  client:
+    service-url:
+      defaultZone: http://unionman:12345678@localhost:7001/eureka/
+    register-with-eureka: false
+    fetch-registry: false
+  server:
+    enable-self-preservation: false
+    eviction-interval-timer-in-ms: 60000
+    wait-time-in-ms-when-sync-empty: 60000

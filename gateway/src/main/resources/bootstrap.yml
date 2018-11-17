@@ -1,0 +1,29 @@
+spring:
+  application:
+    name: gate-way
+  profiles:
+    active: test
+zuul:
+  routes:
+    api-a:
+      path: /limit/**
+      serviceId: RATE-LIMITER
+      sensitiveHeaders: "*"
+      stripPrefix: false
+    host:
+      connect-timeout-millis: 60000
+      socket-timeout-millis: 60000
+hystrix:
+  command:
+    default:
+      execution:
+        isolation:
+          thread:
+            timeoutInMilliseconds: 240000ms
+ribbon:
+  ReadTimeout: 60000
+  ConnectTimeout: 60000
+
+eureka:
+  instance:
+    instance-id: ${spring.cloud.client.ip-address}:${server.port}

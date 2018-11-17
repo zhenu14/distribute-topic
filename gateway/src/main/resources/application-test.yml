@@ -1,0 +1,14 @@
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://unionman:12345678@127.0.0.1:7001/eureka/
+      register-with-eureka: false
+      fetch-registry: false
+  healthcheck:
+    enabled: true
+  instance:
+    lease-expiration-duration-in-seconds: 10
+    lease-renewal-interval-in-seconds: 20
+server:
+  port: 7002
+

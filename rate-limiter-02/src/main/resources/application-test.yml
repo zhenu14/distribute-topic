@@ -1,0 +1,9 @@
+spring:
+  redis:
+    database: 1 #索引（默认为0）
+    host: localhost #地址
+    port: 6379 #端口号
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://unionman:12345678@localhost:7001/eureka/
